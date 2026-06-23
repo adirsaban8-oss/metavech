@@ -11,6 +11,7 @@
   --graphite: #3A3733;
   --bronze: #9A7B4F;
   --bronze-soft: #C2A878;
+  --bronze-text: #7A5F38; /* AA-contrast bronze for small text on light bg (5.3:1) */
   --line: rgba(28, 26, 23, 0.12);
   --line-light: rgba(244, 241, 234, 0.18);
 
@@ -50,7 +51,10 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent; /* no grey flash on iOS tap */
 }
+
+a, button { touch-action: manipulation; } /* removes 300ms tap delay on iOS */
 
 img { max-width: 100%; display: block; height: auto; }
 a { color: inherit; text-decoration: none; }
@@ -70,7 +74,9 @@ ul, ol { list-style: none; padding: 0; }
   width: 100%;
   max-width: var(--maxw);
   margin-inline: auto;
-  padding-inline: var(--gutter);
+  /* respect iPhone landscape notch / rounded corners */
+  padding-inline-start: max(var(--gutter), env(safe-area-inset-left));
+  padding-inline-end: max(var(--gutter), env(safe-area-inset-right));
 }
 .narrow { max-width: 880px; }
 
@@ -87,6 +93,19 @@ ul, ol { list-style: none; padding: 0; }
 }
 .skip-link:focus { inset-block-start: 1rem; }
 
+/* Screen-reader-only — present for AT, invisible on screen */
+.sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ---------- Typography primitives ---------- */
 .eyebrow {
   font-family: var(--body);
@@ -94,7 +113,7 @@ ul, ol { list-style: none; padding: 0; }
   letter-spacing: 0.28em;
   font-size: 0.72rem;
   font-weight: 500;
-  color: var(--bronze);
+  color: var(--bronze-text);
   margin-block-end: 1.4rem;
 }
 html[lang="he"] .eyebrow { letter-spacing: 0.18em; }
@@ -170,6 +189,7 @@ html[lang="he"] .btn { letter-spacing: 0.05em; }
   z-index: 100;
   transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease), padding 0.4s var(--ease);
   padding-block: 1.6rem;
+  padding-block-start: max(1.6rem, env(safe-area-inset-top)); /* clear the notch */
 }
 .site-header.scrolled {
   background: rgba(244, 241, 234, 0.85);
@@ -177,6 +197,7 @@ html[lang="he"] .btn { letter-spacing: 0.05em; }
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 var(--line);
   padding-block: 0.9rem;
+  padding-block-start: max(0.9rem, env(safe-area-inset-top));
 }
 .header-inner {
   display: flex;
@@ -301,7 +322,8 @@ html[lang="he"] .main-nav a { letter-spacing: 0.05em; font-size: 0.92rem; }
    ============================================================ */
 .hero {
   position: relative;
-  min-block-size: 100svh;
+  min-block-size: 100vh;       /* fallback for older iOS Safari */
+  min-block-size: 100svh;      /* accounts for the dynamic address bar */
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -356,7 +378,7 @@ html[lang="he"] .hero-title { font-weight: 300; line-height: 1.14; }
 
 .scroll-cue {
   position: absolute;
-  inset-block-end: 2.2rem;
+  inset-block-end: calc(2.2rem + env(safe-area-inset-bottom));
   inset-inline-start: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -482,7 +504,7 @@ html[lang="he"] .pull-quote { font-style: normal; font-weight: 300; }
 .card-num {
   font-family: var(--serif);
   font-size: 1.1rem;
-  color: var(--bronze);
+  color: var(--bronze-text);
   letter-spacing: 0.1em;
   display: block;
   margin-block-end: 1.4rem;
@@ -678,6 +700,7 @@ html[lang="he"] .field label { letter-spacing: 0.06em; font-size: 0.85rem; }
    FOOTER
    ============================================================ */
 .site-footer { padding-block: clamp(2.5rem, 5vw, 3.5rem); background: var(--charcoal); color: var(--ivory); border-block-start: 1px solid var(--line-light); }
+.site-footer { padding-block-end: calc(clamp(2.5rem, 5vw, 3.5rem) + env(safe-area-inset-bottom)); } /* clear home indicator */
 .footer-inner {
   display: flex;
   align-items: center;
@@ -742,6 +765,22 @@ html[lang="he"] .field label { letter-spacing: 0.06em; font-size: 0.85rem; }
 }
 
 /* ============================================================
+   TOUCH DEVICES — generous tap targets (iOS 44px guideline)
+   ============================================================ */
+@media (pointer: coarse) {
+  .lang-btn {
+    min-block-size: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding-inline: 0.55rem;
+  }
+  .main-nav a { padding-block: 0.7rem; }
+  .mobile-nav a { min-block-size: 44px; display: flex; align-items: center; }
+  .contact-direct a { padding-block: 0.5rem; }
+  .nav-toggle { padding: 0.7rem; }
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 980px) {
@@ -758,6 +797,9 @@ html[lang="he"] .field label { letter-spacing: 0.06em; font-size: 0.85rem; }
   .step { grid-template-columns: 1fr; gap: 0.5rem; }
   .step-num { font-size: 2.4rem; }
   .hero-content { padding-block: 7rem; }
+  .wordmark-text { font-size: 0.98rem; letter-spacing: 0.12em; }
+  .monogram { inline-size: 2.1rem; block-size: 2.1rem; }
+  .header-actions { gap: 0.9rem; }
   .trust-item:not(:last-child)::after { display: none; }
   .btn { white-space: normal; text-align: center; }
   .hero-actions { width: 100%; }

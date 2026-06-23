@@ -2,11 +2,17 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Alon Shemis · נדל"ן יוקרה · Immobilier de prestige</title>
 
   <meta name="description" content="אלון שמיס — ליווי לקוחות פרטיים ברכישה ובמכירה של נכסי מגורים יוצאי דופן, בדיסקרטיות מוחלטת. Alon Shemis · prestige real estate advisory." />
   <meta name="theme-color" content="#1C1A17" />
+
+  <!-- iOS / Apple -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Alon Shemis" />
+  <meta name="format-detection" content="telephone=no" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
@@ -73,12 +79,12 @@
       </nav>
 
       <div class="header-actions">
-        <div class="lang-switch" role="group" aria-label="Language">
-          <button type="button" data-lang="he" class="lang-btn is-active">HE</button>
+        <div class="lang-switch" role="group" aria-label="בחירת שפה / Language">
+          <button type="button" data-lang="he" class="lang-btn is-active" lang="he" aria-label="עברית" aria-pressed="true">HE</button>
           <span class="lang-sep" aria-hidden="true">·</span>
-          <button type="button" data-lang="fr" class="lang-btn">FR</button>
+          <button type="button" data-lang="fr" class="lang-btn" lang="fr" aria-label="Français" aria-pressed="false">FR</button>
           <span class="lang-sep" aria-hidden="true">·</span>
-          <button type="button" data-lang="en" class="lang-btn">EN</button>
+          <button type="button" data-lang="en" class="lang-btn" lang="en" aria-label="English" aria-pressed="false">EN</button>
         </div>
         <a href="#contact" class="btn btn-outline header-cta" data-i18n="nav.cta">לתיאום פגישה</a>
       </div>
@@ -111,7 +117,7 @@
           <a href="#contact" class="btn btn-solid" data-i18n="hero.cta">לתיאום פגישה אישית</a>
         </div>
       </div>
-      <a href="#statement" class="scroll-cue" aria-hidden="true">
+      <a href="#statement" class="scroll-cue" aria-hidden="true" tabindex="-1">
         <span data-i18n="hero.scroll">גלול</span>
         <span class="scroll-line"></span>
       </a>
@@ -120,6 +126,7 @@
     <!-- ============ SIGNATURE STATEMENT ============ -->
     <section class="statement" id="statement">
       <div class="container narrow">
+        <h2 class="sr-only" data-i18n="quote.text">נכס יוצא דופן אינו נמכר. הוא נמסר — לידיים הנכונות, ברגע הנכון.</h2>
         <blockquote class="pull-quote reveal" data-i18n="quote.text">נכס יוצא דופן אינו נמכר. הוא נמסר — לידיים הנכונות, ברגע הנכון.</blockquote>
         <span class="flourish reveal" aria-hidden="true"></span>
       </div>
@@ -146,7 +153,8 @@
     <section class="expertise" id="expertise">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow reveal" data-i18n="expertise.eyebrow">— תחומי מומחיות</p>
+          <h2 class="sr-only" data-i18n="expertise.eyebrow">— תחומי מומחיות</h2>
+          <p class="eyebrow reveal" data-i18n="expertise.eyebrow" aria-hidden="true">— תחומי מומחיות</p>
         </header>
         <div class="cards">
           <article class="card reveal">
@@ -177,7 +185,8 @@
     <section class="approach" id="approach">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow reveal" data-i18n="approach.eyebrow">— הגישה</p>
+          <h2 class="sr-only" data-i18n="approach.eyebrow">— הגישה</h2>
+          <p class="eyebrow reveal" data-i18n="approach.eyebrow" aria-hidden="true">— הגישה</p>
         </header>
         <ol class="steps">
           <li class="step reveal">
@@ -217,7 +226,8 @@
       <div class="gallery-bg" aria-hidden="true"></div>
       <div class="gallery-overlay" aria-hidden="true"></div>
       <div class="container narrow gallery-content">
-        <p class="gallery-text reveal" data-i18n="gallery.text">דיסקרטיות אינה שירות נוסף. היא הבסיס לכל מה שאני עושה.</p>
+        <h2 class="sr-only" data-i18n="gallery.text">דיסקרטיות אינה שירות נוסף. היא הבסיס לכל מה שאני עושה.</h2>
+        <p class="gallery-text reveal" data-i18n="gallery.text" aria-hidden="true">דיסקרטיות אינה שירות נוסף. היא הבסיס לכל מה שאני עושה.</p>
         <p class="gallery-sub reveal" data-i18n="gallery.sub">רשת בינלאומית. שיקול דעת מוחלט. גישה לעולם שאינו מתפרסם.</p>
       </div>
     </section>
@@ -250,11 +260,11 @@
         <form class="contact-form reveal" id="contact-form" novalidate>
           <div class="field">
             <label for="f-name" data-i18n="contact.label.name">שם</label>
-            <input type="text" id="f-name" name="name" autocomplete="name" required />
+            <input type="text" id="f-name" name="name" autocomplete="name" required aria-required="true" />
           </div>
           <div class="field">
             <label for="f-contact" data-i18n="contact.label.contact">טלפון / אימייל</label>
-            <input type="text" id="f-contact" name="contact" autocomplete="email" required />
+            <input type="text" id="f-contact" name="contact" autocomplete="email" required aria-required="true" />
           </div>
           <div class="field">
             <label for="f-message" data-i18n="contact.label.message">במה אוכל לסייע?</label>
@@ -273,12 +283,12 @@
     <div class="container footer-inner">
       <span class="monogram footer-mono" aria-hidden="true">AS</span>
       <p class="footer-text" data-i18n="footer.text">אלון שמיס · נדל"ן יוקרה · כל הזכויות שמורות ©</p>
-      <div class="lang-switch footer-lang" role="group" aria-label="Language">
-        <button type="button" data-lang="he" class="lang-btn is-active">HE</button>
+      <div class="lang-switch footer-lang" role="group" aria-label="בחירת שפה / Language">
+        <button type="button" data-lang="he" class="lang-btn is-active" lang="he" aria-label="עברית" aria-pressed="true">HE</button>
         <span class="lang-sep" aria-hidden="true">·</span>
-        <button type="button" data-lang="fr" class="lang-btn">FR</button>
+        <button type="button" data-lang="fr" class="lang-btn" lang="fr" aria-label="Français" aria-pressed="false">FR</button>
         <span class="lang-sep" aria-hidden="true">·</span>
-        <button type="button" data-lang="en" class="lang-btn">EN</button>
+        <button type="button" data-lang="en" class="lang-btn" lang="en" aria-label="English" aria-pressed="false">EN</button>
       </div>
     </div>
   </footer>
