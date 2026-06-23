@@ -6,6 +6,7 @@ window.I18N = {
   he: {
     dir: "rtl",
     "a11y.skip": "דלג לתוכן",
+    "wa.label": "שליחת הודעה בוואטסאפ",
     "a11y.menu": "תפריט נגישות",
     "a11y.title": "התאמות נגישות",
     "a11y.close": "סגירה",
@@ -21,7 +22,7 @@ window.I18N = {
     "a11y.reset": "איפוס הגדרות",
     "a11y.statement": "הצהרת נגישות",
     "a11y.statementTitle": "הצהרת נגישות",
-    "a11y.statementBody": "אתר זה מחויב לאפשר שימוש נוח ושוויוני לכלל הגולשים, לרבות אנשים עם מוגבלות. האתר נבנה, ככל האפשר, בהתאם לתקן הישראלי ת\"י 5568 ולהנחיות WCAG 2.1 ברמה AA, והותקן בו תפריט נגישות המאפשר התאמות תצוגה (גודל טקסט, ניגודיות, גופן קריא ועוד). אם נתקלתם בקושי כלשהו בנגישות האתר, נשמח לסייע ולתקן — נא לפנות לרכז/ת הנגישות בטלפון או באימייל המופיעים בעמוד יצירת הקשר. עודכן לאחרונה: יוני 2026.",
+    "a11y.statementBody": "אתר זה מחויב לאפשר שימוש נוח ושוויוני לכלל הגולשים, לרבות אנשים עם מוגבלות. האתר נבנה, ככל האפשר, בהתאם לתקן הישראלי ת\"י 5568 ולהנחיות WCAG 2.1 ברמה AA, והותקן בו תפריט נגישות המאפשר התאמות תצוגה (גודל טקסט, ניגודיות, גופן קריא ועוד). אם נתקלתם בקושי כלשהו בנגישות האתר, נשמח לסייע ולתקן — נא לפנות לרכז הנגישות אלון שמיס בטלפון 053-668-6797 או באימייל alonshemis1@gmail.com. עודכן לאחרונה: יוני 2026.",
 
     "nav.about": "אודות",
     "nav.expertise": "מומחיות",
@@ -85,6 +86,7 @@ window.I18N = {
   fr: {
     dir: "ltr",
     "a11y.skip": "Aller au contenu",
+    "wa.label": "Envoyer un message WhatsApp",
     "a11y.menu": "Menu d'accessibilité",
     "a11y.title": "Réglages d'accessibilité",
     "a11y.close": "Fermer",
@@ -100,7 +102,7 @@ window.I18N = {
     "a11y.reset": "Réinitialiser",
     "a11y.statement": "Déclaration d'accessibilité",
     "a11y.statementTitle": "Déclaration d'accessibilité",
-    "a11y.statementBody": "Ce site s'engage à offrir une utilisation confortable et équitable à tous, y compris aux personnes en situation de handicap. Il a été conçu, dans la mesure du possible, conformément à la norme israélienne IS 5568 et aux directives WCAG 2.1 niveau AA, et il intègre un menu d'accessibilité permettant d'adapter l'affichage (taille du texte, contraste, police lisible, etc.). Si vous rencontrez une difficulté d'accessibilité, nous serons heureux de vous aider — veuillez contacter le référent accessibilité par téléphone ou e-mail indiqués sur la page de contact. Dernière mise à jour : juin 2026.",
+    "a11y.statementBody": "Ce site s'engage à offrir une utilisation confortable et équitable à tous, y compris aux personnes en situation de handicap. Il a été conçu, dans la mesure du possible, conformément à la norme israélienne IS 5568 et aux directives WCAG 2.1 niveau AA, et il intègre un menu d'accessibilité permettant d'adapter l'affichage (taille du texte, contraste, police lisible, etc.). Si vous rencontrez une difficulté d'accessibilité, nous serons heureux de vous aider — veuillez contacter le référent accessibilité, Alon Shemis, au 053-668-6797 ou par e-mail à alonshemis1@gmail.com. Dernière mise à jour : juin 2026.",
 
     "nav.about": "À propos",
     "nav.expertise": "Expertise",
@@ -164,6 +166,7 @@ window.I18N = {
   en: {
     dir: "ltr",
     "a11y.skip": "Skip to content",
+    "wa.label": "Message on WhatsApp",
     "a11y.menu": "Accessibility menu",
     "a11y.title": "Accessibility settings",
     "a11y.close": "Close",
@@ -179,7 +182,7 @@ window.I18N = {
     "a11y.reset": "Reset settings",
     "a11y.statement": "Accessibility statement",
     "a11y.statementTitle": "Accessibility statement",
-    "a11y.statementBody": "This site is committed to providing a comfortable and equitable experience for all users, including people with disabilities. It was built, as far as possible, in line with Israeli Standard IS 5568 and the WCAG 2.1 level AA guidelines, and it includes an accessibility menu that allows display adjustments (text size, contrast, readable font, and more). If you encounter any accessibility difficulty, we will be glad to help and correct it — please contact the accessibility coordinator by phone or email listed on the contact page. Last updated: June 2026.",
+    "a11y.statementBody": "This site is committed to providing a comfortable and equitable experience for all users, including people with disabilities. It was built, as far as possible, in line with Israeli Standard IS 5568 and the WCAG 2.1 level AA guidelines, and it includes an accessibility menu that allows display adjustments (text size, contrast, readable font, and more). If you encounter any accessibility difficulty, we will be glad to help and correct it — please contact the accessibility coordinator, Alon Shemis, at 053-668-6797 or by email at alonshemis1@gmail.com. Last updated: June 2026.",
 
     "nav.about": "About",
     "nav.expertise": "Expertise",
