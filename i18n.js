@@ -102,7 +102,7 @@ window.I18N = {
     "a11y.reset": "Réinitialiser",
     "a11y.statement": "Déclaration d'accessibilité",
     "a11y.statementTitle": "Déclaration d'accessibilité",
-    "a11y.statementBody": "Ce site s'engage à offrir une utilisation confortable et équitable à tous, y compris aux personnes en situation de handicap. Il a été conçu, dans la mesure du possible, conformément à la norme israélienne IS 5568 et aux directives WCAG 2.1 niveau AA, et il intègre un menu d'accessibilité permettant d'adapter l'affichage (taille du texte, contraste, police lisible, etc.). Si vous rencontrez une difficulté d'accessibilité, nous serons heureux de vous aider — veuillez contacter le référent accessibilité, Alon Shemis, au 053-668-6797 ou par e-mail à alonshemis1@gmail.com. Dernière mise à jour : juin 2026.",
+    "a11y.statementBody": "Ce site s'engage à offrir une utilisation confortable et équitable à tous, y compris aux personnes en situation de handicap. Il a été conçu, dans la mesure du possible, conformément à la norme israélienne IS 5568 et aux directives WCAG 2.1 niveau AA, et il intègre un menu d'accessibilité permettant d'adapter l'affichage (taille du texte, contraste, police lisible, etc.). Si vous rencontrez une difficulté d'accessibilité, nous serons heureux de vous aider — veuillez contacter le référent accessibilité, Alon Shamis, au 053-668-6797 ou par e-mail à alonshemis1@gmail.com. Dernière mise à jour : juin 2026.",
 
     "nav.about": "À propos",
     "nav.expertise": "Expertise",
@@ -112,15 +112,15 @@ window.I18N = {
 
     "hero.eyebrow": "— IMMOBILIER DE PRESTIGE",
     "hero.headline": "L'art de trouver l'adresse juste",
-    "hero.sub": "Alon Shemis accompagne une clientèle privée dans l'acquisition et la vente de résidences d'exception — avec une discrétion absolue, un goût sûr et une véritable expertise.",
+    "hero.sub": "Alon Shamis accompagne une clientèle privée dans l'acquisition et la vente de résidences d'exception — avec une discrétion absolue, un goût sûr et une véritable expertise.",
     "hero.cta": "Demander un entretien privé",
     "hero.scroll": "Découvrir",
 
     "quote.text": "Un bien d'exception ne se vend pas. Il se transmet — aux bonnes mains, au bon moment.",
 
     "about.eyebrow": "— À PROPOS",
-    "about.title": "Alon Shemis",
-    "about.body": "Alon Shemis compte parmi les conseillers les plus respectés de l'immobilier de prestige. Il a bâti sa réputation sur une expertise approfondie, un jugement sûr et un réseau international qui ouvre des portes que le marché visible ne montre jamais. Son approche est personnelle et discrète. Chaque client bénéficie d'un accompagnement exclusif — de la compréhension du véritable besoin à l'identification du bien juste, jusqu'à une négociation menée avec la plus grande délicatesse. Alon ne traite pas du volume. Il traite de l'adéquation parfaite. Ses clients — familles, dirigeants et investisseurs d'Israël et d'Europe — reviennent vers lui, et lui confient ceux qui leur sont les plus proches. C'est, à ses yeux, la seule preuve véritable du professionnalisme.",
+    "about.title": "Alon Shamis",
+    "about.body": "Alon Shamis compte parmi les conseillers les plus respectés de l'immobilier de prestige. Il a bâti sa réputation sur une expertise approfondie, un jugement sûr et un réseau international qui ouvre des portes que le marché visible ne montre jamais. Son approche est personnelle et discrète. Chaque client bénéficie d'un accompagnement exclusif — de la compréhension du véritable besoin à l'identification du bien juste, jusqu'à une négociation menée avec la plus grande délicatesse. Alon ne traite pas du volume. Il traite de l'adéquation parfaite. Ses clients — familles, dirigeants et investisseurs d'Israël et d'Europe — reviennent vers lui, et lui confient ceux qui leur sont les plus proches. C'est, à ses yeux, la seule preuve véritable du professionnalisme.",
 
     "expertise.eyebrow": "— DOMAINES D'EXPERTISE",
     "expertise.c1.title": "Acquisition de résidences d'exception",
@@ -160,7 +160,7 @@ window.I18N = {
     "contact.or": "Ou écrivez-moi directement sur WhatsApp",
     "contact.sent": "Merci. Je vous répondrai personnellement très prochainement.",
 
-    "footer.text": "Alon Shemis · Immobilier de prestige · Tous droits réservés ©"
+    "footer.text": "Alon Shamis · Immobilier de prestige · Tous droits réservés ©"
   },
 
   en: {
@@ -182,7 +182,7 @@ window.I18N = {
     "a11y.reset": "Reset settings",
     "a11y.statement": "Accessibility statement",
     "a11y.statementTitle": "Accessibility statement",
-    "a11y.statementBody": "This site is committed to providing a comfortable and equitable experience for all users, including people with disabilities. It was built, as far as possible, in line with Israeli Standard IS 5568 and the WCAG 2.1 level AA guidelines, and it includes an accessibility menu that allows display adjustments (text size, contrast, readable font, and more). If you encounter any accessibility difficulty, we will be glad to help and correct it — please contact the accessibility coordinator, Alon Shemis, at 053-668-6797 or by email at alonshemis1@gmail.com. Last updated: June 2026.",
+    "a11y.statementBody": "This site is committed to providing a comfortable and equitable experience for all users, including people with disabilities. It was built, as far as possible, in line with Israeli Standard IS 5568 and the WCAG 2.1 level AA guidelines, and it includes an accessibility menu that allows display adjustments (text size, contrast, readable font, and more). If you encounter any accessibility difficulty, we will be glad to help and correct it — please contact the accessibility coordinator, Alon Shamis, at 053-668-6797 or by email at alonshemis1@gmail.com. Last updated: June 2026.",
 
     "nav.about": "About",
     "nav.expertise": "Expertise",
@@ -192,15 +192,15 @@ window.I18N = {
 
     "hero.eyebrow": "— PRESTIGE REAL ESTATE",
     "hero.headline": "The art of finding the right address",
-    "hero.sub": "Alon Shemis advises a private clientele on the acquisition and sale of exceptional residences — with absolute discretion, refined taste, and genuine expertise.",
+    "hero.sub": "Alon Shamis advises a private clientele on the acquisition and sale of exceptional residences — with absolute discretion, refined taste, and genuine expertise.",
     "hero.cta": "Request a private consultation",
     "hero.scroll": "Discover",
 
     "quote.text": "An exceptional property is never merely sold. It is entrusted — to the right hands, at the right moment.",
 
     "about.eyebrow": "— ABOUT",
-    "about.title": "Alon Shemis",
-    "about.body": "Alon Shemis is among the most respected advisors in prestige real estate. He has built his name on deep expertise, sound judgment, and an international network that opens doors the visible market never reveals. His approach is personal and quiet. Every client receives exclusive guidance — from understanding the true need, to identifying the right property, to conducting sensitive negotiations with complete discretion. Alon does not deal in volume. He deals in the perfect match. His clients — families, executives, and investors across Israel and Europe — return to him again and again, and entrust him with those closest to them. That, to him, is the only true measure of professionalism.",
+    "about.title": "Alon Shamis",
+    "about.body": "Alon Shamis is among the most respected advisors in prestige real estate. He has built his name on deep expertise, sound judgment, and an international network that opens doors the visible market never reveals. His approach is personal and quiet. Every client receives exclusive guidance — from understanding the true need, to identifying the right property, to conducting sensitive negotiations with complete discretion. Alon does not deal in volume. He deals in the perfect match. His clients — families, executives, and investors across Israel and Europe — return to him again and again, and entrust him with those closest to them. That, to him, is the only true measure of professionalism.",
 
     "expertise.eyebrow": "— AREAS OF EXPERTISE",
     "expertise.c1.title": "Acquisition of exceptional residences",
@@ -240,6 +240,6 @@ window.I18N = {
     "contact.or": "Or message me directly on WhatsApp",
     "contact.sent": "Thank you. I will reply to you personally, shortly.",
 
-    "footer.text": "Alon Shemis · Prestige Real Estate · All rights reserved ©"
+    "footer.text": "Alon Shamis · Prestige Real Estate · All rights reserved ©"
   }
 };
