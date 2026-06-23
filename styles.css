@@ -1046,6 +1046,30 @@ html[lang="he"] .field label { letter-spacing: 0.06em; font-size: 0.85rem; }
 .wa-float:hover, .wa-float:focus-visible { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(28, 26, 23, 0.34); }
 .wa-float svg { inline-size: 30px; block-size: 30px; fill: currentColor; }
 
+/* Back-to-top — sits above the WhatsApp button, fades in on scroll */
+.to-top {
+  position: fixed;
+  right: calc(1.3rem + env(safe-area-inset-right));
+  bottom: calc(1.3rem + env(safe-area-inset-bottom) + 54px + 0.7rem);
+  z-index: 190;
+  inline-size: 54px;
+  block-size: 54px;
+  border-radius: 50%;
+  background: var(--charcoal);
+  color: var(--ivory);
+  border: 1px solid var(--bronze);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 28px rgba(28, 26, 23, 0.28);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease), background 0.3s var(--ease);
+}
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover, .to-top:focus-visible { background: var(--bronze); transform: translateY(-2px); }
+.to-top svg { inline-size: 22px; block-size: 22px; fill: currentColor; }
+
 .a11y-panel {
   position: absolute;
   bottom: calc(100% + 12px);

@@ -90,6 +90,17 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  /* ---------- Back to top ---------- */
+  const toTop = document.getElementById("to-top");
+  if (toTop) {
+    const onTopScroll = () => { toTop.classList.toggle("show", window.scrollY > 500); };
+    onTopScroll();
+    window.addEventListener("scroll", onTopScroll, { passive: true });
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: REDUCED ? "auto" : "smooth" });
+    });
+  }
+
   /* ---------- Mobile nav ---------- */
   const toggle = document.querySelector(".nav-toggle");
   const mobileNav = document.getElementById("mobile-nav");
