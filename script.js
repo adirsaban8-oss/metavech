@@ -36,6 +36,10 @@
       const key = el.getAttribute("data-i18n-aria");
       if (table[key] != null) el.setAttribute("aria-label", table[key]);
     });
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-alt");
+      if (table[key] != null) el.setAttribute("alt", table[key]);
+    });
   }
 
   function setLang(lang, { animate = true } = {}) {
