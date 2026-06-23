@@ -32,6 +32,10 @@
       const key = el.getAttribute("data-i18n-placeholder");
       if (table[key] != null) el.setAttribute("placeholder", table[key]);
     });
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria");
+      if (table[key] != null) el.setAttribute("aria-label", table[key]);
+    });
   }
 
   function setLang(lang, { animate = true } = {}) {
@@ -177,4 +181,99 @@
       form.reset();
     });
   }
+
+  /* ============================================================
+     ACCESSIBILITY WIDGET
+     Floating menu: font scaling, contrast, grayscale, highlight
+     links, readable font, big cursor, stop animation. Persisted.
+     ============================================================ */
+  (function a11y() {
+    const root = document.documentElement;
+    const widget = document.getElementById("a11y");
+    const toggle = document.getElementById("a11y-toggle");
+    const panel = document.getElementById("a11y-panel");
+    if (!widget || !toggle || !panel) return;
+
+    const KEY = "as-a11y";
+    const FONT_STEPS = ["", "112%", "125%", "140%"]; // index 0 = default
+    const FLAGS = ["contrast", "grayscale", "links", "readable", "bigcursor", "stopanim"];
+
+    const defaults = { font: 0, contrast: false, grayscale: false, links: false, readable: false, bigcursor: false, stopanim: false };
+    let state = Object.assign({}, defaults);
+    try {
+      const saved = JSON.parse(localStorage.getItem(KEY));
+      if (saved && typeof saved === "object") state = Object.assign({}, defaults, saved);
+    } catch (e) { /* ignore */ }
+
+    function apply() {
+      root.style.fontSize = FONT_STEPS[state.font] || "";
+      FLAGS.forEach((f) => root.classList.toggle("a11y-" + f, !!state[f]));
+      // reflect pressed states
+      panel.querySelectorAll("[data-a11y]").forEach((b) => {
+        b.setAttribute("aria-pressed", state[b.getAttribute("data-a11y")] ? "true" : "false");
+      });
+    }
+    function save() {
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
+    }
+
+    apply(); // restore on load
+
+    // option toggles
+    panel.querySelectorAll("[data-a11y]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const f = btn.getAttribute("data-a11y");
+        state[f] = !state[f];
+        apply(); save();
+      });
+    });
+
+    // font size
+    const dec = document.getElementById("a11y-font-dec");
+    const inc = document.getElementById("a11y-font-inc");
+    if (inc) inc.addEventListener("click", () => { state.font = Math.min(FONT_STEPS.length - 1, state.font + 1); apply(); save(); });
+    if (dec) dec.addEventListener("click", () => { state.font = Math.max(0, state.font - 1); apply(); save(); });
+
+    // reset
+    const reset = document.getElementById("a11y-reset");
+    if (reset) reset.addEventListener("click", () => { state = Object.assign({}, defaults); apply(); save(); });
+
+    // open / close panel
+    let open = false;
+    function setOpen(v) {
+      open = v;
+      panel.hidden = !v;
+      toggle.setAttribute("aria-expanded", v ? "true" : "false");
+      if (v) {
+        const first = document.getElementById("a11y-close");
+        if (first) first.focus();
+      }
+    }
+    toggle.addEventListener("click", () => setOpen(!open));
+    const closeBtn = document.getElementById("a11y-close");
+    if (closeBtn) closeBtn.addEventListener("click", () => { setOpen(false); toggle.focus(); });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && open) { setOpen(false); toggle.focus(); }
+    });
+    document.addEventListener("click", (e) => {
+      if (open && !widget.contains(e.target)) setOpen(false);
+    });
+
+    // statement modal
+    const modal = document.getElementById("a11y-modal");
+    const stmtBtn = document.getElementById("a11y-statement");
+    const modalClose = document.getElementById("a11y-modal-close");
+    if (modal && stmtBtn) {
+      const setModal = (v) => {
+        modal.hidden = !v;
+        if (v) { if (modalClose) modalClose.focus(); }
+        else { stmtBtn.focus(); }
+      };
+      stmtBtn.addEventListener("click", () => setModal(true));
+      if (modalClose) modalClose.addEventListener("click", () => setModal(false));
+      modal.addEventListener("click", (e) => { if (e.target === modal) setModal(false); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !modal.hidden) setModal(false); });
+    }
+  })();
 })();
